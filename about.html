@@ -118,30 +118,13 @@ body {
   margin-bottom: 20px;
 }
 
-/* ---------- AGENCY HIERARCHY ---------- */
-
-.agency-name {
-  font-family: "Merriweather", serif;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.agency-sub {
-  font-family: "Merriweather", serif;
-  font-size: 16px;
-  opacity: 0.7;
-  margin-bottom: 20px;
-}
-
-/* ---------- FORM ---------- */
+/* ---------- CONTACT FORM ---------- */
 
 .contact-form {
   margin-top: 20px;
 }
 
 .contact-form input,
-.contact-form select,
 .contact-form textarea {
   width: 100%;
   padding: 12px;
@@ -150,6 +133,7 @@ body {
   border-radius: 6px;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
+  box-sizing: border-box;
 }
 
 .contact-form button {
@@ -166,17 +150,6 @@ body {
 
 .contact-form button:hover {
   opacity: 0.8;
-}
-
-/* Spain agency message */
-.agency-message {
-  display: none;
-  margin-top: 20px;
-  padding: 18px;
-  background: #f2f2f2;
-  border-radius: 8px;
-  font-size: 15px;
-  line-height: 1.6;
 }
 
 /* ---------- BOTTOM NAV ---------- */
@@ -225,9 +198,18 @@ body {
 }
 
 @media (max-width: 900px) {
-  .main-nav { padding: 24px; }
-  .nav-inner { flex-direction: column; gap: 20px; }
-  .about-wrap { padding: 0 20px 180px 20px; }
+  .main-nav {
+    padding: 24px;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-wrap {
+    padding: 0 20px 180px 20px;
+  }
 }
 </style>
 </head>
@@ -235,10 +217,13 @@ body {
 <body>
 
 <nav class="main-nav" id="mainNav">
+
   <div class="nav-inner">
+
     <a href="index.html" class="nav-name">Lilen Maeda</a>
 
     <div style="display:flex; align-items:center;">
+
       <div class="nav-links">
         <a href="Acting.html">Acting</a>
         <a href="Modeling.html">Modeling</a>
@@ -247,15 +232,29 @@ body {
       </div>
 
       <div class="nav-social">
-        <a href="https://www.instagram.com/lilen_maeda" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@LilenMusic" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://www.tiktok.com/@watashiwalilen" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+
+        <a href="https://www.instagram.com/lilen_maeda" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.youtube.com/@LilenMusic" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@watashiwalilen" target="_blank">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
       </div>
+
     </div>
+
   </div>
+
 </nav>
 
 <div class="about-wrap">
+
   <section class="about-page">
 
     <h2>About & Contact</h2>
@@ -266,45 +265,55 @@ body {
     </p>
 
     <div class="contact-section">
-      <h3>Representation</h3>
 
-      <div class="agency-name">MOT Management</div>
-      <div class="agency-sub">Spain (Exclusive Representation)</div>
+      <h3>Contact</h3>
 
-      <p>Available for international projects and collaborations.</p>
+      <p>
+        Available for international projects, collaborations, acting, modeling,
+        and creative opportunities.
+      </p>
 
-      <h3>International Inquiries</h3>
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+      >
 
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input
+          type="text"
+          name="Name"
+          placeholder="Your Name"
+          required
+        >
 
-        <select name="Project Location" id="locationSelect" required>
-          <option value="">Project Location</option>
-          <option value="Spain">Spain</option>
-          <option value="International">International</option>
-        </select>
+        <input
+          type="email"
+          name="Email"
+          placeholder="Your Email"
+          required
+        >
 
-        <div class="agency-message" id="agencyMessage">
-          <strong>MOT Management</strong><br>
-          Spain (Exclusive Representation)<br><br>
-          <a href="mailto:mot@motmanagement.es">mot@motmanagement.es</a><br>
-          <a href="mailto:moda@motmanagement.es">moda@motmanagement.es</a><br>
-          <a href="tel:+34627210256">+34 627 210 256</a><br><br>
-          For bookings within Spain, please contact the agency directly.
-        </div>
+        <textarea
+          name="Message"
+          rows="5"
+          placeholder="Project Details"
+          required
+        ></textarea>
 
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="Email" placeholder="Your Email" required>
-        <textarea name="Message" rows="5" placeholder="Project Details" required></textarea>
+        <button type="submit">
+          Send Message
+        </button>
 
-        <button type="submit">Send Message</button>
       </form>
 
     </div>
 
   </section>
+
 </div>
 
 <div class="bottom-nav" id="bottomNav">
+
   <a href="index.html">Home</a>
   <a href="Acting.html">Acting</a>
   <a href="Modeling.html">Modeling</a>
@@ -312,38 +321,43 @@ body {
   <a href="about.html">About & Contact</a>
 
   <div class="bottom-social">
-    <a href="https://www.instagram.com/lilen_maeda" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://www.youtube.com/@LilenMusic" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-    <a href="https://www.tiktok.com/@watashiwalilen" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+
+    <a href="https://www.instagram.com/lilen_maeda" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@LilenMusic" target="_blank">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/@watashiwalilen" target="_blank">
+      <i class="fa-brands fa-tiktok"></i>
+    </a>
+
   </div>
+
 </div>
 
 <script>
-const locationSelect = document.getElementById("locationSelect");
-const agencyMessage = document.getElementById("agencyMessage");
-const formFields = document.querySelectorAll(".contact-form input, .contact-form textarea, .contact-form button");
-
-locationSelect.addEventListener("change", function() {
-  if (this.value === "Spain") {
-    agencyMessage.style.display = "block";
-    formFields.forEach(field => field.style.display = "none");
-  } else {
-    agencyMessage.style.display = "none";
-    formFields.forEach(field => field.style.display = "block");
-  }
-});
 
 const mainNav = document.getElementById("mainNav");
 const bottomNav = document.getElementById("bottomNav");
 
 function toggleBottomNav() {
+
   const navBottom = mainNav.getBoundingClientRect().bottom;
-  if (navBottom <= 0) bottomNav.classList.add("show");
-  else bottomNav.classList.remove("show");
+
+  if (navBottom <= 0) {
+    bottomNav.classList.add("show");
+  } else {
+    bottomNav.classList.remove("show");
+  }
+
 }
 
 window.addEventListener("scroll", toggleBottomNav);
 window.addEventListener("load", toggleBottomNav);
+
 </script>
 
 </body>
